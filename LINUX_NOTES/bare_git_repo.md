@@ -35,6 +35,11 @@ ls
 vim authorized_key
 ```
 ## Paste the public ssh key generated on your machine onto the authorized_key file created :
+## Set the correct permissions on the .ssh directory and the authorized_keys file:
+```bash
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+```
 ## Find the IP address on the remote machine:
 ```bash
 ip addr
