@@ -46,6 +46,34 @@ ssh Aditya@10.12.34.76
 Note: here 'Aditya' is the username of the person where the remote repo is to be established
 After running this command ,enter the password in password prompt :Connection is established
 
+## Now setting up the bare git repo:
+Navigate to the the place you want to create the bare git repo:
+You can easily initialize a bare git repository as discussed earlier, by using git init --bare command. The repository should preferably have a .git suffix.
+```bash
+git init --bare
+```
+## Step 2: Clone The Remote Git Repository
+You can simply clone your remote repo using ssh protocol and the syntax will be in the order git clone ssh://username@publicIP/<absolute path of repo>
+```bash
+git clone ssh://username@publicIP/<absolute path of repo>
+```
+## Step 3: Create a File and Commit Some Changes
+Simply add a few files and put some content into it, similarly committing 2-3 changes will help you visualize better.
+
+## Remove local repo using rm -rf and clone again to ensure everything is working
+
+Verify the content of your files using cat command
+Pros & Cons of a Bare Git Repo:
+Pros:
+One can get real practical exposure to using a distributed VCS.
+You can have your own remote git repo independent of any third-party client eg: Gitlab, Github.
+No need to create an account with a third-party client.
+Practically good for a small team working remotely.
+Cons:
+Additional headache to maintain a remote server containing code.
+Loss of server might result in loss of all the files.
+Cannot visualize the files stored in our remote repo.
+
 
 
 
